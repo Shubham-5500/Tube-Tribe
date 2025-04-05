@@ -1,0 +1,113 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 25% 98%;
+    --foreground: 260 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 260 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 10% 10%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 199 89% 48%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 260 20% 96%;
+    --muted-foreground: 260 10% 50%;
+
+    --accent: 306 76% 61%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 260 20% 90%;
+    --input: 260 20% 90%;
+    --ring: 262 83% 58%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 260 25% 8%;
+    --foreground: 260 10% 90%;
+
+    --card: 260 25% 12%;
+    --card-foreground: 260 10% 90%;
+
+    --popover: 260 25% 12%;
+    --popover-foreground: 260 10% 90%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 199 89% 48%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 260 25% 16%;
+    --muted-foreground: 260 10% 70%;
+
+    --accent: 306 76% 61%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 260 25% 20%;
+    --input: 260 25% 16%;
+    --ring: 262 83% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .tube-gradient {
+    @apply bg-gradient-to-r from-tube-purple to-tube-magenta;
+  }
+  
+  .tube-button {
+    @apply px-6 py-3 rounded-lg font-semibold text-white transition-all 
+           hover:shadow-lg hover:shadow-tube-purple/30 active:scale-95
+           tube-gradient;
+  }
+  
+  .tube-card {
+    @apply bg-card/70 backdrop-blur-sm border border-border/50 rounded-xl shadow-md;
+  }
+  
+  .tube-input {
+    @apply px-4 py-2 bg-background border border-input rounded-lg focus:ring-2 
+           focus:ring-primary/50 focus:outline-none transition-all;
+  }
+  
+  .glow-effect {
+    @apply relative;
+  }
+  
+  .glow-effect::after {
+    @apply content-[''] absolute -z-10 top-0 left-0 right-0 bottom-0 
+           bg-gradient-to-r from-tube-purple to-tube-magenta opacity-0
+           blur-xl transition-opacity duration-300;
+  }
+  
+  .glow-effect:hover::after {
+    @apply opacity-20;
+  }
+}
