@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState, RefObject } from "react";
 
 type UseInViewOptions = {
