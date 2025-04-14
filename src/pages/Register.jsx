@@ -1,14 +1,13 @@
 
-import { useState, FormEvent } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { LandingNav } from "@/components/landing/LandingNav";
+import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Eye, EyeOff } from "lucide-react";
-import { toast } from "../hooks/use-toast";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -16,24 +15,17 @@ const Register = () => {
   const [name, setName] = useState("");
   const [accountType, setAccountType] = useState("creator");
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate();
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Register attempt with:", { email, name, accountType });
-    
-    toast({
-      title: "Registration Successful",
-      description: `Welcome to TubeTribe, ${name}! Please log in to continue.`,
-    });
-    
-    // Redirect to login page after successful registration
-    navigate("/login");
+    // In a real app, we would handle registration here
+    // For now, console log the attempt
   };
 
   return (
     <div className="min-h-screen flex flex-col">
-      <LandingNav />
+      <Navbar />
       <div className="flex-grow flex items-center justify-center px-4 py-32">
         <div className="w-full max-w-md">
           <div className="text-center mb-8">

@@ -1,22 +1,19 @@
-
-import Navbar from "@/components/navigation/Navbar";
-import Hero from "@/components/landing/Hero";
-import Features from "@/components/landing/Features";
-import Testimonials from "@/components/landing/Testimonials";
-import CallToAction from "@/components/landing/CallToAction";
-import Footer from "@/components/navigation/Footer";
-import AnimatedBackground from "@/components/ui/AnimatedBackground";
+import { LandingNav } from "../components/landing/LandingNav";
+import { Footer } from "../components/Footer";
+import { HeroSection } from "../components/landing/HeroSection";
+import { FeaturesSection } from "../components/landing/FeaturesSection";
+import { TestimonialsSection } from "../components/landing/TestimonialsSection";
+import { CtaSection } from "../components/landing/CtaSection";
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <AnimatedBackground />
-      <Navbar />
-      <main className="flex-1">
-        <Hero />
-        <Features />
-        <Testimonials />
-        <CallToAction />
+      <LandingNav />
+      <main className="flex-grow">
+        <HeroSection />
+        <FeaturesSection />
+        <TestimonialsSection />
+        <CtaSection />
       </main>
       <Footer />
     </div>
