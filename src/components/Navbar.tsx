@@ -1,5 +1,4 @@
-
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -13,8 +12,6 @@ export function Navbar() {
   const navigate = useNavigate();
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
   const userData = JSON.parse(localStorage.getItem("userData") || "{}");
-
-  // Check if the link is active based on the current path
   const isActive = (path: string) => {
     return location.pathname === path;
   };
@@ -99,10 +96,10 @@ export function Navbar() {
             ) : (
               <>
                 <Link to="/login">
-                  <Button variant="ghost" size="sm">Sign in</Button>
+                  <Button variant="ghost" size="sm" className="hover:scale-105 transition-transform">Sign in</Button>
                 </Link>
                 <Link to="/register">
-                  <Button size="sm" className="gradient-bg hover:opacity-90">Join Now</Button>
+                  <Button size="sm" className="gradient-bg hover:opacity-90 hover:scale-105 transition-all">Join Now</Button>
                 </Link>
               </>
             )}

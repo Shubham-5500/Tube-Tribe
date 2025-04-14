@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Twitter, Youtube } from "lucide-react";
 
@@ -46,7 +45,7 @@ export function Footer() {
           <div className="col-span-1">
             <h3 className="text-sm font-semibold">Resources</h3>
             <ul className="mt-4 space-y-2">
-              {["Getting Started", "Tutorials", "API", "Help Center"].map((item) => (
+              {["Getting Started", "Tutorials", "Help Center"].map((item) => (
                 <li key={item}>
                   <Link to={`/${item.toLowerCase().replace(/\s+/g, '-')}`} className="text-sm text-foreground/70 hover:text-primary">
                     {item}

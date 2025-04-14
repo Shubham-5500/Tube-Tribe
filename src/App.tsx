@@ -18,7 +18,6 @@ import Community from "./pages/Community";
 import Features from "./pages/features";
 import GettingStarted from "./pages/getting-started";
 import Tutorials from "./pages/tutorials";
-import API from "./pages/api";
 import HelpCenter from "./pages/help-center";
 import About from "./pages/about";
 import Privacy from "./pages/privacy";
@@ -26,10 +25,8 @@ import Terms from "./pages/terms";
 import Contact from "./pages/contact";
 import CollaborationHub from "./pages/collaboration-hub";
 
-// Create a new QueryClient instance outside of the component
 const queryClient = new QueryClient();
 
-// Convert to function component
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
@@ -53,15 +50,12 @@ const App = () => {
               <Route path="/features" element={<Features />} />
               <Route path="/getting-started" element={<GettingStarted />} />
               <Route path="/tutorials" element={<Tutorials />} />
-              <Route path="/api" element={<API />} />
               <Route path="/help-center" element={<HelpCenter />} />
               <Route path="/about" element={<About />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/collaboration-hub" element={<CollaborationHub />} />
-              
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
