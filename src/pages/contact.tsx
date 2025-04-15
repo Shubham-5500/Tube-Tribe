@@ -1,4 +1,3 @@
-
 import { BasicLayout } from "../components/layouts/BasicLayout";
 import { Card, CardContent, CardHeader } from "../components/ui/card";
 import { Input } from "../components/ui/input";
@@ -22,7 +21,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // In a real app, you would send this data to your backend
     console.log("Form submitted:", formData);
     toast({
       title: "Message Sent",

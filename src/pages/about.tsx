@@ -1,36 +1,72 @@
 import { BasicLayout } from "../components/layouts/BasicLayout";
 import { Card, CardContent } from "../components/ui/card";
-import { User, Award, Heart } from "lucide-react";
+import { User, Award, Heart, Github, Linkedin } from "lucide-react";
 
 const About = () => {
   const teamMembers = [
     {
-      name: "Alex Rodriguez",
-      position: "Founder & CEO",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150&h=150",
-      bio: "Former YouTube creator with 500K subscribers who saw the need for a better collaboration platform.",
+      name: "Shubham Mishra",
+      position: "",
+      linkedin: (
+        <a href="https://www.linkedin.com/in/shubham5500/">
+          <Linkedin></Linkedin>
+        </a>
+      ),
+      github: (
+        <a href="https://github.com/Shubham-5500/">
+          <Github></Github>
+        </a>
+      ),
+      image: "/shubham.png",
+      bio: "",
     },
     {
-      name: "Samantha Chen",
-      position: "Chief Product Officer",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150",
-      bio: "Product visionary with experience at top tech companies and a passion for creator economies.",
+      name: "Vedant Tiwari",
+      position: "",
+      linkedin: (
+        <a href="https://www.linkedin.com/in/vedanttiwari07/">
+          <Linkedin></Linkedin>
+        </a>
+      ),
+      github: (
+        <a href="https://github.com/vedanttiwari07/">
+          <Github></Github>
+        </a>
+      ),
+      image: "/vedant.png",
+      bio: "",
     },
     {
-      name: "Marcus Johnson",
-      position: "Head of Community",
-      image:
-        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=150&h=150",
-      bio: "Community building expert who has grown online communities to millions of members.",
+      name: "Vasu Sahu",
+      position: "",
+      linkedin: (
+        <a href="https://www.linkedin.com/in/vasu-sahu-s2ep7/">
+          <Linkedin></Linkedin>
+        </a>
+      ),
+      github: (
+        <a href="https://github.com/VasuS609/">
+          <Github></Github>
+        </a>
+      ),
+      image: "/vasu.png",
+      bio: "",
     },
     {
-      name: "Priya Patel",
-      position: "CTO",
-      image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150&h=150",
-      bio: "Tech leader with a background in social platforms and matching algorithms.",
+      name: "Ayush Patel",
+      position: "",
+      linkedin: (
+        <a href="https://www.linkedin.com/in/ayushpatel69/">
+          <Linkedin></Linkedin>
+        </a>
+      ),
+      github: (
+        <a href="https://github.com/6969Ayush6969/">
+          <Github></Github>
+        </a>
+      ),
+      image: "/ayush.png",
+      bio: "",
     },
   ];
 
@@ -148,6 +184,14 @@ const About = () => {
                   </div>
                   <h3 className="text-lg font-semibold mb-1">{member.name}</h3>
                   <p className="text-primary text-sm mb-3">{member.position}</p>
+                  <div className="flex gap-3">
+                    <p className="text-foreground/90 hover:text-primary mb-3 text-sm">
+                      {member.linkedin}
+                    </p>
+                    <p className="text-foreground/90 hover:text-primary mb-3 text-sm">
+                      {member.github}
+                    </p>
+                  </div>
                   <p className="text-foreground/70 text-sm">{member.bio}</p>
                 </CardContent>
               </Card>

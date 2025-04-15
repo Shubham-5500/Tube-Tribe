@@ -46,9 +46,9 @@ export function Navbar() {
                 Discover
               </Link>
               <Link 
-                to="/collaboration" 
+                to="/collaboration-hub"
                 className={`px-3 py-2 rounded-md text-base font-medium ${
-                  isActive("/collaboration") ? "text-primary" : "hover:text-primary"
+                  isActive("/collaboration-hub") ? "text-primary" : "hover:text-primary"
                 }`}
               >
                 Collaboration
@@ -137,7 +137,7 @@ export function Navbar() {
             <Link 
               to="/collaboration" 
               className={`block px-3 py-2 rounded-md text-base font-medium ${
-                isActive("/collaboration") ? "bg-primary/10 text-primary" : "hover:bg-primary/10 hover:text-primary"
+                isActive("/collaboration-hub") ? "bg-primary/10 text-primary" : "hover:bg-primary/10 hover:text-primary"
               }`}
               onClick={() => setIsMenuOpen(false)}
             >

@@ -63,7 +63,7 @@ export function LandingNav() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <span className="text-3xl font-bold gradient-text animate-text-gradient">
+              <span className="text-3xl font-bold gradient-text">
                 TubeTribe
               </span>
             </Link>
@@ -77,7 +77,7 @@ export function LandingNav() {
               Discover
             </Link>
             <Link
-              to="/collaboration"
+              to="/Collaboration-hub"
               className="text-foreground/80 hover:text-foreground transition-colors hover:scale-105 transform duration-200"
             >
               Collaboration
@@ -181,7 +181,7 @@ export function LandingNav() {
             <Link
               to="/collaboration"
               className={`block px-3 py-2 rounded-md text-base font-medium ${
-                isActive("/collaboration")
+                isActive("/collaboration-hub")
                   ? "bg-primary/10 text-primary"
                   : "hover:bg-primary/10 hover:text-primary"
               }`}

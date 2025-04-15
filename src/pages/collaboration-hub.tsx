@@ -1,6 +1,6 @@
-
 import { BasicLayout } from "../components/layouts/BasicLayout";
 import { Card, CardContent, CardFooter, CardHeader } from "../components/ui/card";
+import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Badge } from "../components/ui/badge";
@@ -58,11 +58,8 @@ const CollaborationHub = () => {
   return (
     <BasicLayout>
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">Collaboration Hub</h1>
-          <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
-            Discover collaboration opportunities or create your own to find the perfect partner for your next video.
-          </p>
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+          <h1 className="text-3xl font-bold">Collaboration</h1>
         </div>
 
         {/* Search and Filter Section */}
@@ -103,7 +100,7 @@ const CollaborationHub = () => {
         {/* Collaboration Opportunities */}
         <div className="mb-16">
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-semibold">Active Opportunities</h2>
+            <h2 className="text-2xl font-semibold">Active Collaborations</h2>
             <Button variant="link" className="flex items-center text-primary">
               View all <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
@@ -148,10 +145,13 @@ const CollaborationHub = () => {
                 </CardContent>
                 <CardFooter className="pt-0 flex justify-between">
                   <Button variant="outline" className="w-full mr-2">View Details</Button>
+                  <Link to="/chat">
                   <Button className="w-full gradient-bg hover:opacity-90">
                     <MessageSquare className="h-4 w-4 mr-2" />
                     Contact
                   </Button>
+                  </Link>
+                  
                 </CardFooter>
               </Card>
             ))}

@@ -13,7 +13,7 @@ import Discover from "./pages/Discover";
 import NotFound from "./pages/NotFound";
 import Profile from "./pages/Profile";
 import Chat from "./pages/Chat";
-import Collaboration from "./pages/Collaboration";
+import Opportunities from "./pages/Opportunities";
 import Community from "./pages/Community";
 import Features from "./pages/features";
 import GettingStarted from "./pages/getting-started";
@@ -43,7 +43,7 @@ const App = () => {
               <Route path="/discover" element={<Discover />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/chat" element={<Chat />} />
-              <Route path="/collaboration" element={<Collaboration />} />
+              <Route path="/opportunities" element={<Opportunities />} />
               <Route path="/community" element={<Community />} />
               
               {/* Footer pages */}

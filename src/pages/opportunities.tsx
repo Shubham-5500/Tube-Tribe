@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { AuthLayout } from "@/components/layouts/AuthLayout";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -119,7 +118,7 @@ interface Project {
   status: string;
 }
 
-const Collaboration = () => {
+const Opportunities = () => {
   const [activeTab, setActiveTab] = useState("discover");
   const [searchTerm, setSearchTerm] = useState("");
   const [opportunities, setOpportunities] = useState<Opportunity[]>([]);
@@ -257,7 +256,7 @@ const Collaboration = () => {
     <AuthLayout>
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-          <h1 className="text-3xl font-bold">Collaboration Hub</h1>
+          <h1 className="text-3xl font-bold">Opportunities</h1>
         </div>
 
         <Tabs defaultValue="discover" value={activeTab} onValueChange={setActiveTab} className="mb-8">
@@ -478,4 +477,4 @@ const Collaboration = () => {
   );
 };
 
-export default Collaboration;
+export default Opportunities;

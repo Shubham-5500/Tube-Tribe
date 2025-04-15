@@ -7,23 +7,23 @@ export function Footer() {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1">
-            <Link to="/" className="flex items-center">
+            <div className="flex items-center">
               <span className="text-2xl font-bold gradient-text">TubeTribe</span>
-            </Link>
+            </div>
             <p className="mt-4 text-sm text-foreground/70">
               The premier community where YouTubers connect, collaborate, and grow together.
             </p>
             <div className="mt-6 flex space-x-4">
-              <a href="#" className="text-foreground/60 hover:text-tribe-purple">
+              <a href="https://www.youtube.com/" className="text-foreground/60 hover:text-tribe-purple">
                 <Youtube className="h-5 w-5" />
               </a>
-              <a href="#" className="text-foreground/60 hover:text-tribe-purple">
+              <a href="https://x.com/shubham5500_" className="text-foreground/60 hover:text-tribe-purple">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-foreground/60 hover:text-tribe-purple">
+              <a href="https://github.com/Shubham-5500/Tube-Tribe" className="text-foreground/60 hover:text-tribe-purple">
                 <Github className="h-5 w-5" />
               </a>
-              <a href="#" className="text-foreground/60 hover:text-tribe-purple">
+              <a href="https://www.linkedin.com/in/shubham5500/" className="text-foreground/60 hover:text-tribe-purple">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -32,7 +32,7 @@ export function Footer() {
           <div className="col-span-1">
             <h3 className="text-sm font-semibold">Platform</h3>
             <ul className="mt-4 space-y-2">
-              {["Discover", "Collaboration Hub", "Community", "Features"].map((item) => (
+              {["Discover", "Collaboration Hub", "Opportunities", "Community", "Features"].map((item) => (
                 <li key={item}>
                   <Link to={`/${item.toLowerCase().replace(/\s+/g, '-')}`} className="text-sm text-foreground/70 hover:text-primary">
                     {item}
