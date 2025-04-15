@@ -13,7 +13,7 @@ import Discover from "./pages/Discover";
 import NotFound from "./pages/NotFound";
 import Profile from "./pages/Profile";
 import Chat from "./pages/Chat";
-import Opportunities from "./pages/Opportunities";
+import Opportunities from "./pages/opportunities";
 import Community from "./pages/Community";
 import Features from "./pages/features";
 import GettingStarted from "./pages/getting-started";
